@@ -230,6 +230,12 @@ var TypeaheadView = (function() {
         dataset.getSuggestions(query, function(suggestions) {
           // only render the suggestions if the query hasn't changed
           if (query === that.inputView.getQuery()) {
+            that.eventBus.trigger(
+              'suggestions',
+              suggestions,
+              dataset,
+              query
+            );
             that.dropdownView.renderSuggestions(dataset, suggestions);
           }
         });
