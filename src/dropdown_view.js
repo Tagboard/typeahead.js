@@ -6,12 +6,12 @@
 
 var DropdownView = (function() {
   var html = {
-        suggestionsList: '<span class="tt-suggestions"></span>'
+        suggestionsList: '<div class="tt-suggestions"></div>'
       },
       css = {
         suggestionsList: { display: 'block' },
         suggestion: { whiteSpace: 'nowrap', cursor: 'pointer' },
-        suggestionChild: { whiteSpace: 'normal' }
+        suggestionChild: { whiteSpace: 'nowrap' }
       };
 
   // constructor
@@ -200,7 +200,7 @@ var DropdownView = (function() {
 
     renderSuggestions: function(dataset, suggestions) {
       var datasetClassName = 'tt-dataset-' + dataset.name,
-          wrapper = '<div class="tt-suggestion">%body</div>',
+          wrapper = '<li class="tt-suggestion">%body</li>',
           compiledHtml,
           $suggestionsList,
           $dataset = this.$menu.find('.' + datasetClassName),

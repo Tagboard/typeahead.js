@@ -6,9 +6,9 @@
 
 var TypeaheadView = (function() {
   var html = {
-        wrapper: '<span class="twitter-typeahead"></span>',
+        wrapper: '<div class="dropdown twitter-typeahead"></div>',
         hint: '<input class="tt-hint" type="text" autocomplete="off" spellcheck="off" disabled>',
-        dropdown: '<span class="tt-dropdown-menu"></span>'
+        dropdown: '<ul class="dropdown-menu tt-dropdown-menu"></ul>'
       },
       css = {
         wrapper: {

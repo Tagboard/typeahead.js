@@ -687,7 +687,7 @@
     }();
     var DropdownView = function() {
         var html = {
-            suggestionsList: '<span class="tt-suggestions"></span>'
+            suggestionsList: '<div class="tt-suggestions"></div>'
         }, css = {
             suggestionsList: {
                 display: "block"
@@ -697,7 +697,7 @@
                 cursor: "pointer"
             },
             suggestionChild: {
-                whiteSpace: "normal"
+                whiteSpace: "nowrap"
             }
         };
         function DropdownView(o) {
@@ -813,7 +813,7 @@
                 return $suggestion.length > 0 ? extractSuggestion($suggestion) : null;
             },
             renderSuggestions: function(dataset, suggestions) {
-                var datasetClassName = "tt-dataset-" + dataset.name, wrapper = '<div class="tt-suggestion">%body</div>', compiledHtml, $suggestionsList, $dataset = this.$menu.find("." + datasetClassName), elBuilder, fragment, $el;
+                var datasetClassName = "tt-dataset-" + dataset.name, wrapper = '<li class="tt-suggestion">%body</li>', compiledHtml, $suggestionsList, $dataset = this.$menu.find("." + datasetClassName), elBuilder, fragment, $el;
                 if ($dataset.length === 0) {
                     $suggestionsList = $(html.suggestionsList).css(css.suggestionsList);
                     $dataset = $("<div></div>").addClass(datasetClassName).append(dataset.header).append($suggestionsList).append(dataset.footer).appendTo(this.$menu);
@@ -856,9 +856,9 @@
     }();
     var TypeaheadView = function() {
         var html = {
-            wrapper: '<span class="twitter-typeahead"></span>',
+            wrapper: '<div class="dropdown twitter-typeahead"></div>',
             hint: '<input class="tt-hint" type="text" autocomplete="off" spellcheck="off" disabled>',
-            dropdown: '<span class="tt-dropdown-menu"></span>'
+            dropdown: '<ul class="dropdown-menu tt-dropdown-menu"></ul>'
         }, css = {
             wrapper: {
                 position: "relative",
