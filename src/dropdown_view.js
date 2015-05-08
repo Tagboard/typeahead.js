@@ -9,9 +9,9 @@ var DropdownView = (function() {
         suggestionsList: '<div class="tt-suggestions"></div>'
       },
       css = {
-        suggestionsList: { display: 'block' },
-        suggestion: { whiteSpace: 'nowrap', cursor: 'pointer' },
-        suggestionChild: { whiteSpace: 'nowrap' }
+        suggestionsList: {},
+        suggestion: {},
+        suggestionChild: {}
       };
 
   // constructor

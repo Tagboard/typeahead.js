@@ -11,30 +11,10 @@ var TypeaheadView = (function() {
         dropdown: '<ul class="dropdown-menu tt-dropdown-menu"></ul>'
       },
       css = {
-        wrapper: {
-          position: 'relative',
-          display: 'inline-block'
-        },
-        hint: {
-          position: 'absolute',
-          top: '0',
-          left: '0',
-          borderColor: 'transparent',
-          boxShadow: 'none'
-        },
-        query: {
-          position: 'relative',
-          verticalAlign: 'top',
-          backgroundColor: 'transparent'
-        },
-        dropdown: {
-          position: 'absolute',
-          top: '100%',
-          left: '0',
-          // TODO: should this be configurable?
-          zIndex: '100',
-          display: 'none'
-        }
+        wrapper: {},
+        hint: {},
+        query: {},
+        dropdown: {}
       };
 
   // ie specific styling

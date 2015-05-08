@@ -689,16 +689,9 @@
         var html = {
             suggestionsList: '<div class="tt-suggestions"></div>'
         }, css = {
-            suggestionsList: {
-                display: "block"
-            },
-            suggestion: {
-                whiteSpace: "nowrap",
-                cursor: "pointer"
-            },
-            suggestionChild: {
-                whiteSpace: "nowrap"
-            }
+            suggestionsList: {},
+            suggestion: {},
+            suggestionChild: {}
         };
         function DropdownView(o) {
             utils.bindAll(this);
@@ -860,29 +853,10 @@
             hint: '<input class="tt-hint" type="text" autocomplete="off" spellcheck="off" disabled>',
             dropdown: '<ul class="dropdown-menu tt-dropdown-menu"></ul>'
         }, css = {
-            wrapper: {
-                position: "relative",
-                display: "inline-block"
-            },
-            hint: {
-                position: "absolute",
-                top: "0",
-                left: "0",
-                borderColor: "transparent",
-                boxShadow: "none"
-            },
-            query: {
-                position: "relative",
-                verticalAlign: "top",
-                backgroundColor: "transparent"
-            },
-            dropdown: {
-                position: "absolute",
-                top: "100%",
-                left: "0",
-                zIndex: "100",
-                display: "none"
-            }
+            wrapper: {},
+            hint: {},
+            query: {},
+            dropdown: {}
         };
         if (utils.isMsie()) {
             utils.mixin(css.query, {
